@@ -28,6 +28,8 @@ const CATEGORY_META: Record<string, { title: string; description: string }> = {
   },
 }
 
+export const revalidate = 60
+
 const VALID_CATEGORIES = Object.keys(CATEGORY_META)
 
 // Placeholder articles per category for when Sanity is empty

@@ -4,6 +4,8 @@ import Footer from '@/components/Footer'
 import { client } from '@/lib/sanity'
 import { allArticlesQuery, featuredArticleQuery } from '@/lib/queries'
 
+export const revalidate = 60
+
 const recentArticles = [
   {
     slug: 'government-is-the-mafia',
