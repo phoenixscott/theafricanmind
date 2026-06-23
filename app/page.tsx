@@ -102,7 +102,7 @@ export default async function HomePage() {
 
       {/* FEATURED ARTICLE */}
       <div style={{ background: 'var(--white)', borderTop: '3px solid var(--gold)' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '4rem 2rem', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
+        <div className="featured-grid" style={{ maxWidth: '1200px', margin: '0 auto', padding: '4rem 2rem', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
           <div>
             <p style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: '0.65rem', fontWeight: 600, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: '1rem' }}>Featured Essay</p>
             <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', fontWeight: 700, lineHeight: 1.15, letterSpacing: '-0.02em', color: 'var(--black)', marginBottom: '1.2rem' }}>
@@ -122,7 +122,7 @@ export default async function HomePage() {
               Read the essay →
             </Link>
           </div>
-          <div style={{ aspectRatio: '4/3', borderRadius: '2px', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%)' }}>
+          <div className="featured-image-box" style={{ aspectRatio: '4/3', borderRadius: '2px', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%)' }}>
             <span style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: '4rem', fontWeight: 900, color: 'var(--gold)', opacity: 0.3, fontStyle: 'italic' }}>TAM</span>
           </div>
         </div>
@@ -134,7 +134,7 @@ export default async function HomePage() {
           <span style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: '0.65rem', fontWeight: 600, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--muted)', whiteSpace: 'nowrap' }}>Recent Writing</span>
           <div style={{ flex: 1, height: '1px', background: 'var(--border)' }} />
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2.5rem' }}>
+        <div className="articles-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2.5rem' }}>
           {articles.map((article: any) => {
             const slug = article.slug?.current ?? article.slug
             const date = article.publishedAt
@@ -160,7 +160,7 @@ export default async function HomePage() {
 
       {/* MERIT-SOVEREIGNISM PILLAR */}
       <div style={{ background: 'var(--black)', color: 'var(--cream)', padding: '5rem 2rem' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '4rem', alignItems: 'start' }}>
+        <div className="pillar-grid" style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '4rem', alignItems: 'start' }}>
           <div>
             <p style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: '0.65rem', fontWeight: 600, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: '1rem' }}>The Philosophy</p>
             <span className="gold-line" style={{ width: '60px', display: 'block', marginBottom: '2rem' }} />
@@ -174,7 +174,7 @@ export default async function HomePage() {
               Explore the philosophy →
             </Link>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
+          <div className="pillar-cards" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
             {pillarCards.map(card => (
               <div key={card.num} style={{ border: '1px solid rgba(255,255,255,0.08)', padding: '1.5rem', borderRadius: '2px' }}>
                 <div style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: '2rem', fontWeight: 900, color: 'var(--gold)', opacity: 0.4, lineHeight: 1, marginBottom: '0.8rem' }}>{card.num}</div>
@@ -188,7 +188,7 @@ export default async function HomePage() {
 
       {/* ABOUT STRIP */}
       <div style={{ background: 'var(--cream)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)', padding: '3.5rem 2rem' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'auto 1fr auto', gap: '3rem', alignItems: 'center' }}>
+        <div className="about-grid" style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'auto 1fr auto', gap: '3rem', alignItems: 'center' }}>
           <div style={{ width: '72px', height: '72px', borderRadius: '50%', background: 'var(--black)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: "'Playfair Display', Georgia, serif", fontSize: '1.8rem', fontWeight: 900, color: 'var(--gold)', fontStyle: 'italic', flexShrink: 0 }}>J</div>
           <div>
             <p style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: '0.65rem', fontWeight: 600, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: '0.4rem' }}>The Writer</p>
@@ -197,7 +197,7 @@ export default async function HomePage() {
               Writing on Nigerian governance, African political economy, and the civilisational questions that define what this continent becomes.
             </p>
           </div>
-          <Link href="/about" style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: '0.72rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--gold)', borderBottom: '1px solid var(--gold)', paddingBottom: '2px', whiteSpace: 'nowrap', textDecoration: 'none' }}>About & Mission →</Link>
+          <Link href="/about" className="about-link-desktop" style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: '0.72rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--gold)', borderBottom: '1px solid var(--gold)', paddingBottom: '2px', whiteSpace: 'nowrap', textDecoration: 'none' }}>About & Mission →</Link>
         </div>
       </div>
 
@@ -207,7 +207,7 @@ export default async function HomePage() {
           <p style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: '0.65rem', fontWeight: 600, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(10,10,10,0.6)', marginBottom: '1rem' }}>Join The Conversation</p>
           <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: 'clamp(1.6rem, 3vw, 2.2rem)', fontWeight: 700, color: 'var(--black)', lineHeight: 1.2, marginBottom: '0.8rem' }}>Think with The African Mind</h2>
           <p style={{ fontSize: '0.9rem', color: 'rgba(10,10,10,0.7)', marginBottom: '2rem', lineHeight: 1.6 }}>New essays on Nigeria, African governance, and civilisational thinking — directly to your inbox.</p>
-          <form style={{ display: 'flex', maxWidth: '480px', margin: '0 auto', borderRadius: '2px', overflow: 'hidden', boxShadow: '0 4px 20px rgba(0,0,0,0.15)' }}>
+          <form className="newsletter-form" style={{ display: 'flex', maxWidth: '480px', margin: '0 auto', borderRadius: '2px', overflow: 'hidden', boxShadow: '0 4px 20px rgba(0,0,0,0.15)' }}>
             <input type="email" placeholder="Your email address" style={{ flex: 1, padding: '0.9rem 1.2rem', fontFamily: "'Inter', system-ui, sans-serif", fontSize: '0.85rem', border: 'none', outline: 'none', background: 'white', color: 'var(--charcoal)' }} />
             <button type="submit" style={{ padding: '0.9rem 1.5rem', background: 'var(--black)', color: 'var(--cream)', fontFamily: "'Inter', system-ui, sans-serif", fontSize: '0.72rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', border: 'none', cursor: 'pointer', whiteSpace: 'nowrap' }}>Subscribe</button>
           </form>
