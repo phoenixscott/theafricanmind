@@ -12,7 +12,7 @@ const CATEGORY_META: Record<string, { title: string; description: string }> = {
   },
   africa: {
     title: 'Africa',
-    description: 'On the broader African civilisational project — what the continent is becoming, and what it must become.',
+    description: 'On the broader African civilisational project: what the continent is becoming, and what it must become.',
   },
   solutions: {
     title: 'Solutions',
@@ -35,9 +35,9 @@ const VALID_CATEGORIES = Object.keys(CATEGORY_META)
 // Placeholder articles per category for when Sanity is empty
 const PLACEHOLDERS: Record<string, any[]> = {
   nigeria: [
-    { slug: { current: 'government-is-the-mafia' }, category: 'nigeria', subcategory: 'Governance', title: 'The Government Is The Mafia: Why Nigerian Oil Corruption Has Never Been Prosecuted', standfirst: "When a crime this large produces zero prosecutions across 25 years of democracy, the state isn't failing to catch the criminals — the state IS the criminals.", publishedAt: '2026-06-01', readTime: '15 min read' },
+    { slug: { current: 'government-is-the-mafia' }, category: 'nigeria', subcategory: 'Governance', title: 'The Government Is The Mafia: Why Nigerian Oil Corruption Has Never Been Prosecuted', standfirst: "When a crime this large produces zero prosecutions across 25 years of democracy, the state isn't failing to catch the criminals. The state IS the criminals.", publishedAt: '2026-06-01', readTime: '15 min read' },
     { slug: { current: 'paper-economy' }, category: 'nigeria', subcategory: 'Economy', title: "Paper Economy: Why Nigeria's Macroeconomic Improvements Mean Nothing For Ordinary Nigerians", standfirst: 'GDP is growing. The stock market has tripled. And eleven million Nigerian children under five are in severe food poverty.', publishedAt: '2026-05-01', readTime: '10 min read' },
-    { slug: { current: 'peter-obi-anambra' }, category: 'nigeria', subcategory: 'Education', title: 'What Peter Obi Actually Did In Anambra: Separating Record From Myth', standfirst: 'From 26th to 1st in national WAEC rankings. The record is documented — and the people attacking it are counting on you not checking.', publishedAt: '2026-04-01', readTime: '11 min read' },
+    { slug: { current: 'peter-obi-anambra' }, category: 'nigeria', subcategory: 'Education', title: 'What Peter Obi Actually Did In Anambra: Separating Record From Myth', standfirst: 'From 26th to 1st in national WAEC rankings. The record is documented, and the people attacking it are counting on you not checking.', publishedAt: '2026-04-01', readTime: '11 min read' },
   ],
   africa: [
     { slug: { current: 'africa-contribution-deficit' }, category: 'africa', subcategory: 'Civilisation', title: "Africa's Contribution Deficit: Why Our Problems Are Humanity's Problem", standfirst: "Africa is 17% of the world's population and less than 3% of global scientific output. This is not a natural state.", publishedAt: '2026-05-01', readTime: '8 min read' },
@@ -95,7 +95,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
               No essays published here yet.
             </p>
             <p style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: '0.8rem', color: 'var(--muted)', marginTop: '0.8rem' }}>
-              Check back soon — or <Link href="/" style={{ color: 'var(--gold)', textDecoration: 'none' }}>return home</Link>.
+              Check back soon, or <Link href="/" style={{ color: 'var(--gold)', textDecoration: 'none' }}>return home</Link>.
             </p>
           </div>
         ) : (

@@ -11,7 +11,7 @@ const recentArticles = [
     slug: 'government-is-the-mafia',
     category: 'Nigeria · Governance',
     title: 'The Government Is The Mafia: Why Nigerian Oil Corruption Has Never Been Prosecuted',
-    excerpt: "When a crime this large, this consistent, and this well-documented produces zero prosecutions across 25 years of democracy, the only logical conclusion is that the state isn't failing to catch the criminals — the state IS the criminals.",
+    excerpt: "When a crime this large, this consistent, and this well-documented produces zero prosecutions across 25 years of democracy, the only logical conclusion is that the state isn't failing to catch the criminals. The state IS the criminals.",
     date: 'June 2026',
     readTime: '15 min read',
   },
@@ -58,10 +58,10 @@ const recentArticles = [
 ]
 
 const pillarCards = [
-  { num: '01', title: 'Collective Ownership', desc: 'Resources belong to the people — not the government, not private monopolies. The distinction is foundational.' },
-  { num: '02', title: 'Merit-Based Access', desc: "Benefits are tiered by contribution and competence — solving communism's core incentive failure without reproducing capitalism's inequality." },
-  { num: '03', title: 'No Political Parties', desc: 'Party structures are the primary vehicle for elite capture in the African context. Their elimination is not radical — it is logical.' },
-  { num: '04', title: 'Bounded Transition', desc: "Constitutional limits on transitional leadership, modelled on Singapore's governance arc — power with an expiry date built in." },
+  { num: '01', title: 'Collective Ownership', desc: 'Resources belong to the people, not the government, not private monopolies. The distinction is foundational.' },
+  { num: '02', title: 'Merit-Based Access', desc: "Benefits are tiered by contribution and competence, solving communism's core incentive failure without reproducing capitalism's inequality." },
+  { num: '03', title: 'No Political Parties', desc: 'Party structures are the primary vehicle for elite capture in the African context. Their elimination is not radical. It is logical.' },
+  { num: '04', title: 'Bounded Transition', desc: "Constitutional limits on transitional leadership, modelled on Singapore's governance arc, power with an expiry date built in." },
 ]
 
 export default async function HomePage() {
@@ -75,7 +75,7 @@ export default async function HomePage() {
     slug: { current: 'fuel-subsidy-fraud' },
     category: 'Nigeria · Oil · Governance',
     title: "Who Is Drinking The Balance? The Truth Behind Nigeria's Fuel Subsidy Fraud",
-    standfirst: "Pakistan has the same population as Nigeria, more roads, and more vehicles — yet consumes a third of the fuel Nigeria claimed to.",
+    standfirst: "Pakistan has the same population as Nigeria, more roads, and more vehicles, yet consumes a third of the fuel Nigeria claimed to.",
     date: 'June 2026',
     readTime: '12 min read',
   }
@@ -170,7 +170,7 @@ export default async function HomePage() {
               Merit-<br />Sovereignism
             </h2>
             <p style={{ fontSize: '0.9rem', lineHeight: 1.75, color: 'rgba(245,240,232,0.65)', marginBottom: '2rem' }}>
-              A governance philosophy designed to solve communism&apos;s incentive failure and capitalism&apos;s inequality — built specifically for Nigeria and the African context.
+              A governance philosophy designed to solve communism&apos;s incentive failure and capitalism&apos;s inequality, built specifically for Nigeria and the African context.
             </p>
             <Link href="/merit-sovereignism" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', fontFamily: "'Inter', system-ui, sans-serif", fontSize: '0.72rem', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--gold)', borderBottom: '1px solid var(--gold)', paddingBottom: '2px', textDecoration: 'none' }}>
               Explore the philosophy →
@@ -208,7 +208,7 @@ export default async function HomePage() {
         <div style={{ maxWidth: '600px', margin: '0 auto', textAlign: 'center' }}>
           <p style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: '0.65rem', fontWeight: 600, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(10,10,10,0.6)', marginBottom: '1rem' }}>Join The Conversation</p>
           <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: 'clamp(1.6rem, 3vw, 2.2rem)', fontWeight: 700, color: 'var(--black)', lineHeight: 1.2, marginBottom: '0.8rem' }}>Think with The African Mind</h2>
-          <p style={{ fontSize: '0.9rem', color: 'rgba(10,10,10,0.7)', marginBottom: '2rem', lineHeight: 1.6 }}>New essays on Nigeria, African governance, and civilisational thinking — directly to your inbox.</p>
+          <p style={{ fontSize: '0.9rem', color: 'rgba(10,10,10,0.7)', marginBottom: '2rem', lineHeight: 1.6 }}>New essays on Nigeria, African governance, and civilisational thinking, directly to your inbox.</p>
           <form className="newsletter-form" style={{ display: 'flex', maxWidth: '480px', margin: '0 auto', borderRadius: '2px', overflow: 'hidden', boxShadow: '0 4px 20px rgba(0,0,0,0.15)' }}>
             <input type="email" placeholder="Your email address" style={{ flex: 1, padding: '0.9rem 1.2rem', fontFamily: "'Inter', system-ui, sans-serif", fontSize: '0.85rem', border: 'none', outline: 'none', background: 'white', color: 'var(--charcoal)' }} />
             <button type="submit" style={{ padding: '0.9rem 1.5rem', background: 'var(--black)', color: 'var(--cream)', fontFamily: "'Inter', system-ui, sans-serif", fontSize: '0.72rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', border: 'none', cursor: 'pointer', whiteSpace: 'nowrap' }}>Subscribe</button>

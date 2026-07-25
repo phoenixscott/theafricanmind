@@ -77,7 +77,7 @@ export default function Comments({ articleSlug }: { articleSlug: string }) {
         </button>
         {status === 'success' && (
           <p style={{ marginTop: '0.8rem', fontSize: '0.85rem', color: 'var(--gold)' }}>
-            Comment submitted — it will appear after moderation.
+            Comment submitted. It will appear after moderation.
           </p>
         )}
         {status === 'error' && (

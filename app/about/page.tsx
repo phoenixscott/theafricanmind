@@ -3,7 +3,7 @@ import Footer from '@/components/Footer'
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'About — The African Mind',
+  title: 'About: The African Mind',
   description: 'The African Mind exists to think seriously about how Africa gets there.',
 }
 
@@ -73,7 +73,7 @@ export default function AboutPage() {
           <p style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: '0.65rem', fontWeight: 600, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: '0.8rem' }}>The Philosophy</p>
           <p style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: '1.2rem', fontWeight: 700, color: 'var(--cream)', marginBottom: '0.8rem' }}>Merit-Sovereignism</p>
           <p style={{ fontSize: '0.9rem', lineHeight: 1.7, color: 'rgba(245,240,232,0.65)', marginBottom: '1.5rem' }}>
-            A governance philosophy built from the observed realities of African failure — not imported from Western political theory, but designed for what comes after.
+            A governance philosophy built from the observed realities of African failure, not imported from Western political theory, but designed for what comes after.
           </p>
           <Link href="/merit-sovereignism" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', fontFamily: "'Inter', system-ui, sans-serif", fontSize: '0.72rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--gold)', borderBottom: '1px solid var(--gold)', paddingBottom: '2px', textDecoration: 'none' }}>
             Explore the philosophy →
