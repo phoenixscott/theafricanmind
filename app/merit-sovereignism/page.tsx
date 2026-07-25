@@ -1,5 +1,6 @@
 import Masthead from '@/components/Masthead'
 import Footer from '@/components/Footer'
+import Link from 'next/link'
 
 const principles = [
   { roman: 'I', title: 'Collective Ownership ≠ Government Ownership', body: "Natural resources and public wealth belong to the people collectively, not to the state as an institution, and certainly not to the political elite that controls the state. The distinction is foundational. Government is the manager of collective wealth, not its owner." },
@@ -55,11 +56,11 @@ export default function MeritSovereignismPage() {
 
         {/* FOUNDING DOCUMENT CTA */}
         <div style={{ background: 'var(--black)', padding: '2.5rem', borderRadius: '2px', marginBottom: '3rem' }}>
-          <p style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: '0.65rem', fontWeight: 600, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: '1rem' }}>Read The Founding Document</p>
-          <p style={{ fontSize: '0.9rem', lineHeight: 1.7, color: 'rgba(245,240,232,0.65)', marginBottom: '1.5rem' }}>The full Merit-Sovereignism founding document, its philosophical foundations, structural proposals, and implementation framework, is available for download.</p>
-          <a href="#" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', fontFamily: "'Inter', system-ui, sans-serif", fontSize: '0.72rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--gold)', borderBottom: '1px solid var(--gold)', paddingBottom: '2px', textDecoration: 'none' }}>
-            Download the founding document →
-          </a>
+          <p style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: '0.65rem', fontWeight: 600, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: '1rem' }}>The Founding Document</p>
+          <p style={{ fontSize: '0.9rem', lineHeight: 1.7, color: 'rgba(245,240,232,0.65)', marginBottom: '1.5rem' }}>The complete founding document: seven parts covering core philosophy, governance structure, economic model, education, constitutional architecture, and international relations.</p>
+          <Link href="/merit-sovereignism/founding-document" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', fontFamily: "'Inter', system-ui, sans-serif", fontSize: '0.72rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--gold)', borderBottom: '1px solid var(--gold)', paddingBottom: '2px', textDecoration: 'none' }}>
+            Read more on Merit-Sovereignism →
+          </Link>
         </div>
       </div>
 
