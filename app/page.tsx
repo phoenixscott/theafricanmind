@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Masthead from '@/components/Masthead'
 import Footer from '@/components/Footer'
+import NewsletterForm from '@/components/NewsletterForm'
 import { client } from '@/lib/sanity'
 import { allArticlesQuery, featuredArticleQuery } from '@/lib/queries'
 
@@ -205,15 +206,7 @@ export default async function HomePage() {
 
       {/* NEWSLETTER */}
       <div style={{ background: 'var(--gold)', padding: '4rem 2rem' }}>
-        <div style={{ maxWidth: '600px', margin: '0 auto', textAlign: 'center' }}>
-          <p style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: '0.65rem', fontWeight: 600, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(10,10,10,0.6)', marginBottom: '1rem' }}>Join The Conversation</p>
-          <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: 'clamp(1.6rem, 3vw, 2.2rem)', fontWeight: 700, color: 'var(--black)', lineHeight: 1.2, marginBottom: '0.8rem' }}>Think with The African Mind</h2>
-          <p style={{ fontSize: '0.9rem', color: 'rgba(10,10,10,0.7)', marginBottom: '2rem', lineHeight: 1.6 }}>New essays on Nigeria, African governance, and civilisational thinking, directly to your inbox.</p>
-          <form className="newsletter-form" style={{ display: 'flex', maxWidth: '480px', margin: '0 auto', borderRadius: '2px', overflow: 'hidden', boxShadow: '0 4px 20px rgba(0,0,0,0.15)' }}>
-            <input type="email" placeholder="Your email address" style={{ flex: 1, padding: '0.9rem 1.2rem', fontFamily: "'Inter', system-ui, sans-serif", fontSize: '0.85rem', border: 'none', outline: 'none', background: 'white', color: 'var(--charcoal)' }} />
-            <button type="submit" style={{ padding: '0.9rem 1.5rem', background: 'var(--black)', color: 'var(--cream)', fontFamily: "'Inter', system-ui, sans-serif", fontSize: '0.72rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', border: 'none', cursor: 'pointer', whiteSpace: 'nowrap' }}>Subscribe</button>
-          </form>
-        </div>
+        <NewsletterForm />
       </div>
 
       <Footer />
