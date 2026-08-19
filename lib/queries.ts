@@ -15,7 +15,7 @@ export const featuredArticleQuery = groq`
 
 export const articleBySlugQuery = groq`
   *[_type == "article" && slug.current == $slug][0] {
-    _id, title, slug, category, subcategory, standfirst, readTime, publishedAt, featuredImage, body
+    _id, title, slug, category, subcategory, standfirst, readTime, publishedAt, featuredImage, body, authorName
   }
 `
 

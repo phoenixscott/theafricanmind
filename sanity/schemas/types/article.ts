@@ -43,6 +43,7 @@ export const article = defineType({
         { type: 'image', options: { hotspot: true } },
       ],
     }),
+    defineField({ name: 'authorName', title: 'Author Name', type: 'string', description: 'Displayed on the article. Defaults to Jeremiah Nome if left blank.' }),
     defineField({ name: 'publishedAt', title: 'Published At', type: 'datetime' }),
     defineField({ name: 'readTime', title: 'Read Time', type: 'string', description: 'e.g. 12 min read' }),
   ],

@@ -39,6 +39,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
 
   if (!article) notFound()
 
+  const author = article.authorName || 'Jeremiah Nome'
   const date = article.publishedAt
     ? new Date(article.publishedAt).toLocaleDateString('en-GB', { month: 'long', year: 'numeric' })
     : ''
@@ -62,7 +63,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
             <div style={{ width: '36px', height: '36px', borderRadius: '50%', background: 'var(--gold)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: "'Playfair Display', Georgia, serif", fontSize: '0.9rem', fontWeight: 700, color: 'var(--black)', fontStyle: 'italic' }}>J</div>
             <div style={{ fontFamily: "'Inter', system-ui, sans-serif" }}>
-              <div style={{ fontSize: '0.8rem', fontWeight: 600, color: 'var(--cream)' }}>Jeremiah Nome</div>
+              <div style={{ fontSize: '0.8rem', fontWeight: 600, color: 'var(--cream)' }}>{author}</div>
               <div style={{ fontSize: '0.7rem', color: 'rgba(245,240,232,0.45)', marginTop: '0.1rem' }}>{date} · {article.readTime}</div>
             </div>
           </div>
