@@ -3,8 +3,8 @@ import { cookies } from 'next/headers'
 import { supabaseAdmin } from '@/lib/supabase'
 import { client } from '@/lib/sanity'
 
-function checkAuth() {
-  const cookieStore = cookies()
+async function checkAuth() {
+  const cookieStore = await cookies()
   return cookieStore.get('admin_session')?.value === 'authenticated'
 }
 
@@ -33,7 +33,7 @@ function toPortableText(text: string) {
 }
 
 export async function GET() {
-  if (!checkAuth()) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  if (!await checkAuth()) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
   const { data, error } = await supabaseAdmin
     .from('submissions')
@@ -45,7 +45,7 @@ export async function GET() {
 }
 
 export async function POST(req: NextRequest) {
-  if (!checkAuth()) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  if (!await checkAuth()) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
   const { id } = await req.json()
 
@@ -77,7 +77,7 @@ export async function POST(req: NextRequest) {
 }
 
 export async function DELETE(req: NextRequest) {
-  if (!checkAuth()) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  if (!await checkAuth()) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
   const { id } = await req.json()
   const { error } = await supabaseAdmin.from('submissions').delete().eq('id', id)
