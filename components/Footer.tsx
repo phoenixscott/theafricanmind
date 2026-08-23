@@ -13,8 +13,8 @@ export default function Footer() {
           </p>
         </div>
         <nav className="footer-nav" style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap', justifyContent: 'flex-end' }}>
-          {['Nigeria', 'Africa', 'Solutions', 'Merit-Sovereignism', 'Fact Checks', 'About'].map(label => (
-            <Link key={label} href={`/${label.toLowerCase().replace(' ', '-')}`} style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: '0.7rem', fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'rgba(245,240,232,0.4)', textDecoration: 'none' }}>
+          {['Nigeria', 'Africa', 'Solutions', 'Merit-Sovereignism', 'Fact Checks', 'About', 'Write for Us'].map(label => (
+            <Link key={label} href={label === 'Write for Us' ? '/write' : `/${label.toLowerCase().replace(' ', '-')}`} style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: '0.7rem', fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'rgba(245,240,232,0.4)', textDecoration: 'none' }}>
               {label}
             </Link>
           ))}
