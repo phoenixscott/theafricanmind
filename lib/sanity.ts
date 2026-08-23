@@ -9,6 +9,14 @@ export const client = createClient({
   token: process.env.SANITY_API_TOKEN,
 })
 
+export const writeClient = createClient({
+  projectId: 'aysihjox',
+  dataset: 'production',
+  apiVersion: '2024-01-01',
+  useCdn: false,
+  token: process.env.SANITY_API_TOKEN,
+})
+
 const builder = imageUrlBuilder(client)
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const urlFor = (source: any) => builder.image(source)

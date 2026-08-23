@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { supabaseAdmin } from '@/lib/supabase'
-import { client } from '@/lib/sanity'
+import { writeClient } from '@/lib/sanity'
 
 function checkAuth(req: NextRequest) {
   return req.cookies.get('admin_session')?.value === process.env.ADMIN_PASSWORD
@@ -55,7 +55,7 @@ export async function POST(req: NextRequest) {
 
   if (fetchError || !submission) return NextResponse.json({ error: 'Submission not found' }, { status: 404 })
 
-  await client.create({
+  await writeClient.create({
     _type: 'article',
     title: submission.title,
     slug: { _type: 'slug', current: slugify(submission.title) },
