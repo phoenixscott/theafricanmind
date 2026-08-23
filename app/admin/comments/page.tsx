@@ -60,8 +60,17 @@ export default function AdminPanel() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ password }),
     })
-    if (res.ok) { setAuthed(true); loadAll() }
-    else setLoginError('Wrong password')
+    if (res.ok) {
+      setAuthed(true)
+      const [cr, sr] = await Promise.all([
+        fetch('/api/admin/comments'),
+        fetch('/api/admin/submissions'),
+      ])
+      if (cr.ok) setComments(await cr.json())
+      if (sr.ok) setSubmissions(await sr.json())
+    } else {
+      setLoginError('Wrong password')
+    }
   }
 
   const loadAll = async () => {
@@ -74,11 +83,15 @@ export default function AdminPanel() {
   }
 
   useEffect(() => {
-    fetch('/api/admin/comments').then(r => {
-      if (r.ok) { setAuthed(true); r.json().then(setComments) }
-    })
-    fetch('/api/admin/submissions').then(r => {
-      if (r.ok) r.json().then(setSubmissions)
+    Promise.all([
+      fetch('/api/admin/comments'),
+      fetch('/api/admin/submissions'),
+    ]).then(async ([cr, sr]) => {
+      if (cr.ok) {
+        setAuthed(true)
+        setComments(await cr.json())
+      }
+      if (sr.ok) setSubmissions(await sr.json())
     })
   }, [])
 
